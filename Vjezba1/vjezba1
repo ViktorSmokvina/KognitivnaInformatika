@@ -1,0 +1,12 @@
+import pytesseract
+from PIL import Image
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+img_path = 'C:\\Users\\Viktor Smokvina\\Desktop\\FSB\\5. semestar\\Kognitivna informatika\\ocr_primjer.png'
+img = Image.open(img_path)
+
+text = pytesseract.image_to_string(img)
+
+print("Prepoznati tekst:")
+print(text)
